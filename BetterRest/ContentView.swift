@@ -24,6 +24,8 @@ struct ContentView: View {
             
             Spacer()
           }
+          DatePicker("Please enter date:", selection: $wakeUp)
+            .labelsHidden()
         }
         .padding()
     }
