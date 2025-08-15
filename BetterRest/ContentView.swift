@@ -24,9 +24,9 @@ struct ContentView: View {
             
             Spacer()
           }
-          DatePicker("Please enter date:", selection: $wakeUp, displayedComponents: .date)
+          DatePicker("Please enter date:", selection: $wakeUp, in: Date.now..., displayedComponents: .date)
             .labelsHidden()
-          DatePicker("Please enter date:", selection: $wakeUp, displayedComponents: .hourAndMinute)
+          DatePicker("Please enter date:", selection: $wakeUp,  displayedComponents: .hourAndMinute)
             .labelsHidden()
         }
         .padding()
