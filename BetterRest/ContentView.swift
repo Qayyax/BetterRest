@@ -28,6 +28,8 @@ struct ContentView: View {
             .labelsHidden()
           DatePicker("Please enter date:", selection: $wakeUp,  displayedComponents: .hourAndMinute)
             .labelsHidden()
+          
+          Text(Date.now, format: .dateTime.day().month().year().hour())
         }
         .padding()
     }
