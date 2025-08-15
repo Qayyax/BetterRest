@@ -30,6 +30,7 @@ struct ContentView: View {
             .labelsHidden()
           
           Text(Date.now, format: .dateTime.day().month().year().hour())
+          Text(Date.now.formatted(date: .long, time: .shortened))
         }
         .padding()
     }
