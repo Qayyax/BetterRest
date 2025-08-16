@@ -5,6 +5,7 @@
 //  Created by Qayyax on 8/14/25.
 //
 
+import CoreML
 import SwiftUI
 
 struct ContentView: View {
@@ -13,6 +14,12 @@ struct ContentView: View {
   @State private var coffeeAmount = 1
   
   func calculateBedTime () {
+    do {
+      let config = MLModelConfiguration()
+      let model = try SleepCalculator(configuration: config)
+    } catch {
+      
+    }
     
   }
   
