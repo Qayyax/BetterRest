@@ -25,6 +25,10 @@ struct ContentView: View {
           .font(.headline)
         
         Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+        
+        Text("Daily coffee intake")
+          .font(.headline)
+        Stepper("\(coffeeAmount) cup(s)", value: $coffeeAmount, in: 1...20)
       }
     }
   }
