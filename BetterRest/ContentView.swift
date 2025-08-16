@@ -12,6 +12,10 @@ struct ContentView: View {
   @State private var sleepAmount = 8.0
   @State private var coffeeAmount = 1
   
+  func calculateBedTime () {
+    
+  }
+  
   var body: some View {
     NavigationStack {
       VStack {
@@ -29,6 +33,10 @@ struct ContentView: View {
         Text("Daily coffee intake")
           .font(.headline)
         Stepper("\(coffeeAmount) cup(s)", value: $coffeeAmount, in: 1...20)
+      }
+      .navigationTitle("BetterRest")
+      .toolbar{
+        Button("Calculate", action: calculateBedTime)
       }
     }
   }
