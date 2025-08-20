@@ -61,6 +61,11 @@ struct ContentView: View {
       .toolbar{
         Button("Calculate", action: calculateBedTime)
       }
+      .alert(alertTitle, isPresented: $showingAlert) {
+        Button("OK") {}
+      } message: {
+        Text(alertMessage)
+      }
     }
   }
 }
